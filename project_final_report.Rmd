@@ -23,7 +23,9 @@ pct_10  <- function(b) round((exp(10 * b) - 1) * 100, 1)   # % change in Y per +
 
 ```{r load-data}
 # Put owid-covid-data.csv in the data/ folder (see data/README.md)
+
 data_orig <- read_csv("data/owid-covid-data.csv")
+
 
 # Aggregate rows (continents, income groups, World, EU) have no continent value,
 # so keeping rows with a continent keeps only individual countries/territories.
@@ -53,7 +55,8 @@ last_date   <- max(data_orig$date)
 
 # About This Report
 
-This analysis began as a team project for STAT 240 (Data Science Modeling I) at UW-Madison. After the course ended, I revised it on my own.
+This analysis began as a team project for STAT 240 (Data Science Modeling I) at UW-Madison. Later, while taking STAT 340 (Data Science Modeling II), I independently revised and expanded it using multiple regression and confounding controls.
+
 
 **Revision note (November 2026).** The original submission concluded that higher vaccination rates were significantly associated with lower COVID-19 mortality (p < 2.2e-16). On review, I found that those regressions had been fit on daily country-level rows (about 65,000 rows) instead of one observation per country. Repeated measurements of the same country were treated as independent, which made the p-values far smaller than they should have been. This version makes the following changes:
 
