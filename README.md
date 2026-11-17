@@ -1,12 +1,19 @@
 # COVID-19 Vaccination and Death Rates
 
-A cross-country statistical analysis of the relationship between COVID-19 vaccination rates and COVID-19 mortality and infection rates, using simple and multiple linear regression. Final project for **STAT 240 (Data Science Modeling I)** at UW-Madison.
+A cross-country statistical analysis of the relationship between COVID-19 vaccination rates and COVID-19 mortality and infection rates. Originally started as a final team project for **STAT 240 (Data Science Modeling I)** at UW-Madison, and later independently expanded using multiple linear regression and confounding controls while taking **STAT 340 (Data Science Modeling II)**.
+
 
 📊 **[View the full report](https://youngjoon020428-cell.github.io/covid-vaccination-analysis/project_final_report.html)**
 
+### 📌 Key Highlights (TL;DR)
+* **Problem:** Re-evaluated a university team project to correct pseudo-replication bias (65k daily rows vs. 209 country-level observations).
+* **Method:** Applied log-linear and multiple regression models controlling for demographic age (`aged_65_older`), national income (`gdp_per_capita`), and pre/post-2021 time lags.
+* **Key Finding:** Demonstrated how positive bivariate correlations between vaccination and mortality are driven by confounding variables ($R^2$ increased from 0.16 to 0.59), highlighting the importance of avoiding ecological fallacies in macro-level data.
+
 ## Team and My Role
 
-This analysis began as a team project for STAT 240 at UW-Madison. After the course ended, I revised the analysis on my own; the revision is described below.
+This analysis began as a group final project for STAT 240 at UW-Madison, where our team focused on data cleaning, exploratory visualization, and simple linear regression. Later, while taking STAT 340 (Data Science Modeling II), I revisited the project on my own to fix methodological flaws from our initial submission and extend the analysis with multiple regression and time-lag modeling.
+
 
 ## Revision History
 
