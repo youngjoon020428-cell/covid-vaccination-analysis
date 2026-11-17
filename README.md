@@ -60,6 +60,7 @@ Worldwide, daily deaths stayed close to their earlier level through the 2021 vac
 | File | Description |
 |---|---|
 | `project_final_report.Rmd` | R Markdown source: data cleaning, exploratory plots, regression models, diagnostics, and write-up |
+| `analysis.R` | R code extracted from the report, runnable on its own |
 | `project_final_report.html` | Rendered report (knit output) |
 | `figures/` | Key figures shown in this README |
 | `data/` | Instructions for obtaining the dataset (raw data not included) |
