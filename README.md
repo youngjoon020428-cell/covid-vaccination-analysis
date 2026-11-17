@@ -2,6 +2,8 @@
 
 A cross-country statistical analysis of the relationship between COVID-19 vaccination rates and COVID-19 mortality and infection rates, using simple and multiple linear regression. Final project for **STAT 240 (Data Science Modeling I)** at UW-Madison.
 
+📊 **[View the full report](https://youngjoon020428-cell.github.io/covid-vaccination-analysis/project_final_report.html)**
+
 ## Team and My Role
 
 This analysis began as a team project for STAT 240 at UW-Madison. After the course ended, I revised the analysis on my own; the revision is described below.
@@ -43,12 +45,23 @@ The project asks whether countries with higher COVID-19 vaccination coverage hav
 - **After adjusting for age and GDP,** the vaccination coefficient for deaths becomes slightly negative but is not significant at α = 0.05. Age and income explain far more of the cross-country variation.
 - **Takeaway:** Country-level cross-sectional data cannot show whether vaccines reduce deaths (the ecological fallacy). Individual-level studies are the appropriate design for that question.
 
+### Figures
+
+Countries with more vaccine doses per person reported *more* deaths per million in the unadjusted data. The upward slope reflects confounding by age and income:
+
+![Vaccination rate vs. COVID-19 death rate by country](figures/vaccination_vs_deaths.png)
+
+Worldwide, daily deaths stayed close to their earlier level through the 2021 vaccine rollout and declined mainly from 2022 onward:
+
+![World daily vaccine doses and COVID-19 deaths](figures/world_trend.png)
+
 ## Repository Contents
 
 | File | Description |
 |---|---|
 | `project_final_report.Rmd` | R Markdown source: data cleaning, exploratory plots, regression models, diagnostics, and write-up |
 | `project_final_report.html` | Rendered report (knit output) |
+| `figures/` | Key figures shown in this README |
 | `data/` | Instructions for obtaining the dataset (raw data not included) |
 
 ## Reproducing the Analysis
